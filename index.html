@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Printer Setup & Support</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="hero">
+    <div class="hero-content">
+      <span class="tag">PRINTER SUPPORT</span>
+      <h1>Get Your Printer<br>Working Again</h1>
+      <p>Follow a few simple steps to set up, connect,<br>
+      or troubleshoot your printer.</p>
+    </div>
+
+    <div class="printer-visual">
+      <div class="printer-top"></div>
+      <div class="printer-body">
+        <div class="printer-panel"></div>
+        <div class="paper-slot"></div>
+        <div class="printer-paper"></div>
+      </div>
+      <div class="printer-base"></div>
+      <div class="wifi-icon">⌁</div>
+    </div>
+  </header>
+
+  <main>
+    <section class="support-section">
+      <h2>Select Your Support Need</h2>
+
+      <label class="option">
+        <input type="radio" name="support" value="setup" checked>
+        <span class="radio"></span>
+        <span>Unpack &amp; Set Up a New Printer</span>
+      </label>
+
+      <label class="option">
+        <input type="radio" name="support" value="connect">
+        <span class="radio"></span>
+        <span>Connect an Existing Printer</span>
+      </label>
+
+      <label class="option">
+        <input type="radio" name="support" value="troubleshoot">
+        <span class="radio"></span>
+        <span>Troubleshoot Printer Issues</span>
+      </label>
+
+      <label class="field-label" for="printerModel">
+        Enter Your Printer Model or Product Number
+      </label>
+
+      <form class="search-form" id="printerForm">
+        <input
+          type="text"
+          id="printerModel"
+          placeholder="Example: Printer Model 2700"
+          required
+        >
+        <button type="submit" aria-label="Continue">➜</button>
+      </form>
+
+      <details class="model-help">
+        <summary>Where Can I Find My Printer Model?</summary>
+        <p>Check the label on your printer, usually on the back,
+        bottom, or inside the cartridge access area.</p>
+      </details>
+    </section>
+
+    <section class="wifi-section">
+      <div class="section-heading">
+        <h2>Connect Your Printer to Wi-Fi</h2>
+        <span class="info-icon">i</span>
+      </div>
+
+      <div class="wifi-content">
+        <div class="printer-illustration">
+          <div class="wifi-symbol">⌁</div>
+          <div class="illustration-printer">
+            <div class="illustration-top"></div>
+            <div class="illustration-screen"></div>
+            <div class="illustration-tray"></div>
+          </div>
+          <p>Wireless Printer Setup</p>
+        </div>
+
+        <div class="wifi-form">
+          <label for="network">Wi-Fi Network</label>
+          <input id="network" type="text" placeholder="Enter network name">
+
+          <label for="password">Enter Wi-Fi Password</label>
+          <input id="password" type="password" placeholder="Enter your password">
+
+          <p class="hint">Make sure your printer and device use the same network.</p>
+
+          <button class="connect-btn" id="connectBtn" type="button">
+            Connect Printer
+          </button>
+          <p class="wifi-message" id="wifiMessage" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="keyboard-art" aria-hidden="true">
+      <div class="key-row">
+        <span>Esc</span><span>F1</span><span>F2</span><span>F3</span>
+        <span>F4</span><span>F5</span><span>F6</span><span>F7</span>
+        <span>F8</span><span>F9</span><span>F10</span><span>F11</span>
+        <span>F12</span>
+      </div>
+      <div class="key-row">
+        <span>1</span><span>2</span><span>3</span><span>4</span>
+        <span>5</span><span>6</span><span>7</span><span>8</span>
+        <span>9</span><span>0</span><span>-</span><span>=</span>
+      </div>
+      <div class="key-row">
+        <span>Tab</span><span>Q</span><span>W</span><span>E</span>
+        <span>R</span><span>T</span><span>Y</span><span>U</span>
+        <span>I</span><span>O</span><span>P</span>
+      </div>
+      <div class="key-row">
+        <span>Caps</span><span>A</span><span>S</span><span>D</span>
+        <span>F</span><span>G</span><span>H</span><span>J</span>
+        <span>K</span><span>L</span><span>Enter</span>
+      </div>
+      <div class="key-row">
+        <span>Shift</span><span>Z</span><span>X</span><span>C</span>
+        <span>V</span><span>B</span><span>N</span><span>M</span>
+        <span>,</span><span>.</span><span>Shift</span>
+      </div>
+      <div class="key-row">
+        <span>Ctrl</span><span>Win</span><span>Alt</span>
+        <span class="space-key"></span><span>Alt</span><span>Menu</span><span>Ctrl</span>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <a href="#top">Printer Setup</a>
+      <span>|</span>
+      <a href="#wifiMessage">Printer Help</a>
+    </div>
+
+    <p class="disclaimer">
+      Independent printer setup and support resource.
+      Not affiliated with any printer manufacturer.
+    </p>
+  </footer>
+
+  <script>
+    document.getElementById("printerForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const model = document.getElementById("printerModel").value.trim();
+      const support = document.querySelector('input[name="support"]:checked').value;
+
+      if (!model) return;
+
+      const params = new URLSearchParams({
+        model: model,
+        support: support
+      });
+
+      window.location.href = "setup.html?" + params.toString();
+    });
+
+    document.getElementById("connectBtn").addEventListener("click", function() {
+      const network = document.getElementById("network").value.trim();
+      const message = document.getElementById("wifiMessage");
+
+      if (!network) {
+        message.textContent = "Please enter your Wi-Fi network name.";
+        return;
+      }
+
+      message.textContent =
+        "Network details entered. Follow your printer manufacturer's instructions to complete the connection.";
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Simple printer setup, driver updates, and troubleshooting guidance.">
+  <title>Printer Care | Setup & Driver Support</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#" aria-label="Printer Care home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 48 48" role="img"><path d="M14 17V6h20v11M12 36H7a4 4 0 0 1-4-4V21a4 4 0 0 1 4-4h34a4 4 0 0 1 4 4v11a4 4 0 0 1-4 4h-5M14 30h20v13H14z"/><path d="M37 23h2"/></svg>
+        </span>
+        <span>Printer Care</span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="main-nav" id="mainNav">
+        <a href="#home">Home</a>
+        <a href="#drivers">Drivers</a>
+        <a href="#setup">Setup</a>
+        <a href="#troubleshooting">Troubleshooting</a>
+        <a href="#support">Support</a>
+      </nav>
+      <form class="search-form" id="searchForm" role="search">
+        <span class="search-icon" aria-hidden="true">⌕</span>
+        <input id="modelSearch" type="search" placeholder="Search your printer model..." aria-label="Search printer model">
+      </form>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> SIMPLE PRINTING, MADE EASIER</p>
+          <h1>Printer Setup &amp; <span>Driver Updates</span></h1>
+          <h2>Get Your Printer Ready to Work</h2>
+          <p>Get your printer up and running with easy-to-follow setup guidance. Find helpful information for compatible drivers, first-time installation, and everyday printing needs.</p>
+          <p>Unpacking a new printer, connecting it to your computer, or updating an existing setup? Follow a clear process designed to make each step simple.</p>
+          <p>Enjoy smoother printing, better device compatibility, and a more reliable connection between your printer and computer.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#setup"><span class="btn-icon">⚙</span> Set Up Printer <span class="arrow">→</span></a>
+            <a class="btn btn-secondary" href="#drivers"><span class="btn-icon">↓</span> Find Drivers <span class="arrow">→</span></a>
+          </div>
+          <p class="search-feedback" id="searchFeedback" aria-live="polite"></p>
+        </div>
+
+        <div class="hero-visual" aria-label="Illustration of a printer and laptop">
+          <div class="orb orb-one"></div><div class="orb orb-two"></div>
+          <div class="float-icon float-gear">⚙</div>
+          <div class="float-icon float-wifi">⌁</div>
+          <div class="float-icon float-doc">▤</div>
+          <div class="float-icon float-print">▣</div>
+          <div class="laptop">
+            <div class="laptop-screen">
+              <div class="download-symbol">↓</div>
+              <div class="download-line"><span></span></div>
+              <div class="screen-caption">READY TO INSTALL</div>
+            </div>
+            <div class="laptop-base"></div>
+          </div>
+          <div class="printer">
+            <div class="printer-top"></div>
+            <div class="printer-lid"></div>
+            <div class="printer-front">
+              <div class="printer-status"><span></span><span></span><span></span></div>
+              <div class="paper-slot"></div>
+              <div class="paper">
+                <div class="paper-lines"><i></i><i></i><i></i></div>
+                <div class="paper-chart"><b></b><b></b><b></b><b></b></div>
+              </div>
+            </div>
+            <div class="printer-tray"></div>
+          </div>
+          <div class="visual-shadow"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="keyboard-section" aria-label="Quick access shortcuts">
+      <div class="keyboard">
+        <div class="key-row function-row">
+          <span class="key">Esc</span><span class="key">F1</span><span class="key">F2</span><span class="key">F3</span><span class="key">F4</span><span class="key gap-key">F5</span><span class="key">F6</span><span class="key">F7</span><span class="key">F8</span><span class="key gap-key">F9</span><span class="key">F10</span><span class="key">F11</span><span class="key">F12</span><span class="key extra-key">Print<br>Screen</span><span class="key extra-key">Scroll<br>Lock</span><span class="key extra-key">Pause</span>
+        </div>
+        <div class="key-row"><span class="key">~<small>`</small></span><span class="key">!<small>1</small></span><span class="key">@<small>2</small></span><span class="key">#<small>3</small></span><span class="key">$<small>4</small></span><span class="key">%<small>5</small></span><span class="key">^<small>6</small></span><span class="key">&amp;<small>7</small></span><span class="key">*<small>8</small></span><span class="key">(<small>9</small></span><span class="key">)<small>0</small></span><span class="key">-</span><span class="key">+</span><span class="key wide-key">← Backspace</span><span class="key extra-key">Insert</span><span class="key extra-key">Home</span><span class="key extra-key">Page Up</span></div>
+        <div class="key-row"><span class="key wide-key">Tab ↹</span><span class="key">Q</span><span class="key">W</span><span class="key">E</span><span class="key">R</span><span class="key">T</span><span class="key">Y</span><span class="key">U</span><span class="key">I</span><span class="key">O</span><span class="key">P</span><span class="key">[</span><span class="key">]</span><span class="key wide-key">\\</span><span class="key extra-key">Delete</span><span class="key extra-key">End</span><span class="key extra-key">Page Down</span></div>
+        <div class="key-row"><span class="key wider-key">Caps Lock</span><span class="key">A</span><span class="key">S</span><span class="key">D</span><span class="key">F</span><span class="key">G</span><span class="key">H</span><span class="key">J</span><span class="key">K</span><span class="key">L</span><span class="key">;</span><span class="key">'</span><span class="key wider-key">↵ Enter</span><span class="key extra-key">7</span><span class="key extra-key">8</span><span class="key extra-key">9</span></div>
+        <div class="key-row"><span class="key wider-key">⇧ Shift</span><span class="key">Z</span><span class="key">X</span><span class="key">C</span><span class="key">V</span><span class="key">B</span><span class="key">N</span><span class="key">M</span><span class="key">,</span><span class="key">.</span><span class="key">?</span><span class="key wider-key">⇧ Shift</span><span class="key extra-key">4</span><span class="key extra-key">5</span><span class="key extra-key">6</span></div>
+        <div class="key-row shortcut-row">
+          <a href="#setup" class="shortcut shortcut-blue"><span>▣</span>Printer</a>
+          <a href="#setup" class="shortcut shortcut-green"><span>◉</span>Connect</a>
+          <a href="#drivers" class="shortcut shortcut-purple"><span>▥</span>Ink</a>
+          <a href="#drivers" class="shortcut shortcut-yellow"><span>▰</span>Toner</a>
+          <span class="key spacebar"></span>
+          <a href="#drivers" class="shortcut shortcut-coral"><span>↓</span>Drivers</a>
+          <a href="#troubleshooting" class="shortcut shortcut-teal"><span>⚙</span>Settings</a>
+          <a href="#troubleshooting" class="shortcut shortcut-lilac"><span>⌁</span>Wi-Fi</a>
+          <a href="#support" class="shortcut shortcut-white"><span>▤</span>Guides</a>
+        </div>
+        <div class="key-row bottom-row"><span class="key">Ctrl</span><span class="key">▦</span><span class="key">Alt</span><span class="key bottom-space"></span><span class="key">Alt</span><span class="key">Ctrl</span></div>
+      </div>
+    </section>
+
+    <section class="info-section container" id="setup">
+      <div class="section-heading">
+        <p class="eyebrow">START HERE</p>
+        <h2>Set Up Your New Printer</h2>
+        <p>Follow these simple steps to get started.</p>
+      </div>
+      <div class="steps-grid">
+        <article class="step-card"><span class="step-number">01</span><div class="step-icon">▣</div><h3>Unpack &amp; Prepare</h3><p>Remove packaging, place your printer on a stable surface, and connect the power cable.</p></article>
+        <article class="step-card"><span class="step-number">02</span><div class="step-icon">⌁</div><h3>Connect Your Device</h3><p>Choose a USB or wireless connection and follow the setup instructions for your device.</p></article>
+        <article class="step-card" id="drivers"><span class="step-number">03</span><div class="step-icon">↓</div><h3>Find Compatible Drivers</h3><p>Check your printer model and operating system to identify the appropriate driver source.</p></article>
+      </div>
+    </section>
+
+    <section class="support-strip" id="troubleshooting">
+      <div class="container support-inner">
+        <div><p class="eyebrow">NEED A HAND?</p><h2>Having trouble printing?</h2><p>Explore common connection, setup, and print-quality checks.</p></div>
+        <a class="btn btn-primary" href="#support">Explore Troubleshooting <span class="arrow">→</span></a>
+      </div>
+    </section>
+    <section class="info-section container support-bottom" id="support">
+      <h2>Helpful Support Guides</h2>
+      <p>For accurate driver downloads, use the printer manufacturer's official website and confirm the model and operating system before installing software.</p>
+    </section>
+  </main>
+  <footer><div class="container footer-inner"><a class="brand footer-brand" href="#"><span class="brand-mark small-mark">▣</span><span>Printer Care</span></a><p>Independent printer setup information. Brand names and trademarks belong to their respective owners.</p><span>© <span id="year"></span> Printer Care</span></div></footer>
+  <script src="script.js"></script>
+</body>
+</html>
