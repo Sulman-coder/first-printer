@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Supported Printer Models</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .models-page{max-width:1100px;margin:50px auto;padding:25px}
+    .models-page h1{text-align:center;color:#123e52}
+    .models-page .intro{text-align:center;color:#556f7e;line-height:1.7}
+    .model-search{width:100%;padding:14px;margin:25px 0;border:1px solid #d4e0e8;border-radius:8px;font-size:16px;box-sizing:border-box}
+    .model-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+    .model-card{padding:18px;border:1px solid #d4e0e8;border-radius:10px;background:#fafbfd;color:#173d4e}
+    .model-card:hover{border-color:#075473}
+    .model-card p{margin:0;line-height:1.6}
+    .no-results{text-align:center;color:#556f7e;grid-column:1/-1}
+    .models-back{text-align:center;margin:30px}
+    .models-back a{color:#075473}
+    @media(max-width:600px){.model-grid{grid-template-columns:1fr}.models-page{padding:16px;margin:25px auto}}
+  </style>
+</head>
+<body>
+  <main class="models-page">
+    <h1>Supported Printer Models</h1>
+    <p class="intro">Browse the printer model list below to find a model for setup and compatibility information.</p>
+
+    <input class="model-search" id="modelSearch" type="search"
+      placeholder="Search printer model..." aria-label="Search printer models">
+
+    <div class="model-grid" id="modelGrid"></div>
+
+    <p class="intro">Compatibility and driver availability can vary by operating system. Verify the exact model and operating system before installing a driver.</p>
+
+    <div class="models-back">
+      <a href="index.html">Back to Printer Setup</a>
+    </div>
+  </main>
+
+  <script>
+    const models = [
+      "Multifunction Laser Printer M1005 Series",
+      "Ink Advantage All-in-One Printer 2130 Series",
+      "Professional Office All-in-One Printer 9010 Series",
+      "Wireless Ink Tank Printer 410 Series",
+      "Professional Laser Multifunction Printer M428–M429f Series",
+      "Multifunction Laser Printer M1136 Series",
+      "Color Laser Multifunction Printer M282–M285 Series",
+      "Wireless All-in-One Printer 2700e Series",
+      "All-in-One Printer 4100e Series",
+      "Professional Laser Printer P1102 Series",
+      "Laser Printer 1020 Series",
+      "Laser Multifunction Printer 130 Series",
+      "Professional Laser Printer P1106/P1108 Series",
+      "Professional Laser Printer M404–M405 Series",
+      "Professional Laser Printer 400 M401 Series",
+      "All-in-One Printer 2130 Series",
+      "Compact All-in-One Printer 3700 Series",
+      "Color Laser Multifunction Printer M478–M479 Series",
+      "All-in-One Printer 2700 Series",
+      "Universal Printer Driver Series for Windows",
+      "Laser Printer P2055 Series",
+      "Professional Laser Printer M402–M403 n/dn Series",
+      "Wireless All-in-One Printer 6000e Series"
+    ];
+
+    const grid = document.getElementById("modelGrid");
+    const search = document.getElementById("modelSearch");
+
+    function renderModels() {
+      const query = search.value.toLowerCase().trim();
+      const filtered = models.filter(model =>
+        model.toLowerCase().includes(query)
+      );
+
+      grid.replaceChildren();
+
+      if (!filtered.length) {
+        const message = document.createElement("p");
+        message.className = "no-results";
+        message.textContent = "No matching printer models found.";
+        grid.appendChild(message);
+        return;
+      }
+
+      filtered.forEach(model => {
+        const card = document.createElement("div");
+        card.className = "model-card";
+        const name = document.createElement("p");
+        name.textContent = model;
+        card.appendChild(name);
+        grid.appendChild(card);
+      });
+    }
+
+    search.addEventListener("input", renderModels);
+    renderModels();
+  </script>
+</body>
+</html>

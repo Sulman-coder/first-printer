@@ -6,6 +6,101 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Printer Setup & Support</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .supported-models {
+  margin-top: 28px;
+}
+
+.supported-models h3 {
+  color: #123e52;
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+.model-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.model-list button {
+  width: 100%;
+  min-height: 58px;
+  padding: 12px 15px;
+  border: 1px solid #d4e0e8;
+  border-radius: 9px;
+  background: #eff3f8;
+  color: #123e52;
+  font: inherit;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.2s ease,
+              color 0.2s ease,
+              border-color 0.2s ease;
+}
+
+.model-list button:hover {
+  background: #075473;
+  color: #fff;
+  border-color: #075473;
+}
+
+.model-list button:focus-visible {
+  outline: 3px solid #789dd1;
+  outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+  .model-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
+.footer-policy-text {
+  max-width: 850px;
+  margin: 30px auto 24px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.footer-policy-text section {
+  margin-bottom: 24px;
+  scroll-margin-top: 20px;
+}
+
+.footer-policy-text h3 {
+  color: #ffffff;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-policy-text p {
+  color: #d3deee;
+  font-size: 14px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .footer-policy-text {
+    padding: 0 15px;
+  }
+
+  .footer-policy-text h3 {
+    font-size: 16px;
+  }
+
+  .footer-policy-text p {
+    font-size: 13px;
+  }
+}
+
+  </style>
 </head>
 <body>
 
@@ -62,8 +157,44 @@
           placeholder="Example: Printer Model 2700"
           required
         >
-        <button type="submit" aria-label="Continue">➜</button>
+        <button type="submit" aria-label="Continue">Setup Now</button>
       </form>
+
+
+<label class="field-label" for="printerModel">
+  Enter Your Printer Model or Product Number
+</label>
+
+<div class="supported-models">
+  <h3>Printer Models and Driver Compatibility List</h3>
+
+  <div class="model-list" id="modelList">
+    <button type="button">Multifunction Laser Printer M1005 Series</button>
+    <button type="button">Ink Advantage All-in-One Printer 2130 Series</button>
+    <button type="button">Professional Office All-in-One Printer 9010 Series</button>
+    <button type="button">Wireless Ink Tank Printer 410 Series</button>
+    <button type="button">Professional Laser Multifunction Printer M428–M429f Series</button>
+    <button type="button">Multifunction Laser Printer M1136 Series</button>
+    <button type="button">Color Laser Multifunction Printer M282–M285 Series</button>
+    <button type="button">Wireless All-in-One Printer 2700e Series</button>
+    <button type="button">All-in-One Printer 4100e Series</button>
+    <button type="button">Professional Laser Printer P1102 Series</button>
+    <button type="button">Laser Printer 1020 Series</button>
+    <button type="button">Laser Multifunction Printer 130 Series</button>
+    <button type="button">Professional Laser Printer P1106/P1108 Series</button>
+    <button type="button">Professional Laser Printer M404–M405 Series</button>
+    <button type="button">Professional Laser Printer 400 M401 Series</button>
+    <button type="button">All-in-One Printer 2130 Series</button>
+    <button type="button">Compact All-in-One Printer 3700 Series</button>
+    <button type="button">Color Laser Multifunction Printer M478–M479 Series</button>
+    <button type="button">All-in-One Printer 2700 Series</button>
+    <button type="button">Universal Printer Driver Series for Windows</button>
+    <button type="button">Laser Printer P2055 Series</button>
+    <button type="button">Professional Laser Printer M402–M403 n/dn Series</button>
+    <button type="button">Wireless All-in-One Printer 6000e Series</button>
+  </div>
+</div>
+
 
       <details class="model-help">
         <summary>Where Can I Find My Printer Model?</summary>
@@ -106,7 +237,7 @@
       </div>
     </section>
   </main>
-
+<!-- 
   <footer>
     <div class="keyboard-art" aria-hidden="true">
       <div class="key-row">
@@ -141,17 +272,94 @@
       </div>
     </div>
 
-    <div class="footer-links">
-      <a href="#top">Printer Setup</a>
-      <span>|</span>
-      <a href="#wifiMessage">Printer Help</a>
-    </div>
+ <div class="footer-links">
+  <a href="index.html">Printer Setup</a>
+  <a href="supported-models.html">Supported Models</a>
+  <a href="privacy-policy.html">Privacy Policy</a>
+  <a href="refund-policy.html">Refund Policy</a>
+  <a href="about-us.html">About Us</a>
+  <a href="contact-us.html">Contact Us</a>
+</div>
 
     <p class="disclaimer">
       Independent printer setup and support resource.
       Not affiliated with any printer manufacturer.
     </p>
-  </footer>
+  </footer> -->
+
+
+
+
+  
+<footer>
+  <div class="keyboard-art" aria-hidden="true">
+    <div class="key-row">
+      <span>Esc</span><span>F1</span><span>F2</span><span>F3</span>
+      <span>F4</span><span>F5</span><span>F6</span><span>F7</span>
+      <span>F8</span><span>F9</span><span>F10</span><span>F11</span>
+      <span>F12</span>
+    </div>
+    <div class="key-row">
+      <span>1</span><span>2</span><span>3</span><span>4</span>
+      <span>5</span><span>6</span><span>7</span><span>8</span>
+      <span>9</span><span>0</span><span>-</span><span>=</span>
+    </div>
+    <div class="key-row">
+      <span>Tab</span><span>Q</span><span>W</span><span>E</span>
+      <span>R</span><span>T</span><span>Y</span><span>U</span>
+      <span>I</span><span>O</span><span>P</span>
+    </div>
+    <div class="key-row">
+      <span>Caps</span><span>A</span><span>S</span><span>D</span>
+      <span>F</span><span>G</span><span>H</span><span>J</span>
+      <span>K</span><span>L</span><span>Enter</span>
+    </div>
+    <div class="key-row">
+      <span>Shift</span><span>Z</span><span>X</span><span>C</span>
+      <span>V</span><span>B</span><span>N</span><span>M</span>
+      <span>,</span><span>.</span><span>Shift</span>
+    </div>
+    <div class="key-row">
+      <span>Ctrl</span><span>Win</span><span>Alt</span>
+      <span class="space-key"></span><span>Alt</span><span>Menu</span><span>Ctrl</span>
+    </div>
+  </div>
+
+  <div class="footer-links">
+    <a href="index.html">Printer Setup</a>
+    <a href="supported-models.html">Supported Models</a>
+    <a href="#privacy-policy">Privacy Policy</a>
+    <a href="#refund-policy">Refund Policy</a>
+    <a href="about-us.html">About Us</a>
+    <a href="contact-us.html">Contact Us</a>
+  </div>
+
+  <div class="footer-policy-text">
+    <section id="privacy-policy">
+      <h3>Privacy Policy</h3>
+      <p>
+        We respect your privacy. Information you submit through this website
+        may be used to respond to your support requests and provide assistance.
+        Please do not submit passwords or other sensitive personal information.
+      </p>
+    </section>
+
+    <section id="refund-policy">
+      <h3>Refund Policy</h3>
+      <p>
+        If you have purchased a service and have a question about a refund,
+        please contact the service provider with your order details.
+        Refund eligibility depends on the service purchased and the applicable
+        refund terms.
+      </p>
+    </section>
+  </div>
+
+  <p class="disclaimer">
+    Independent printer setup and support resource.
+    Not affiliated with any printer manufacturer.
+  </p>
+</footer>
 
   <script>
     document.getElementById("printerForm").addEventListener("submit", function(event) {
@@ -183,6 +391,48 @@
         "Network details entered. Follow your printer manufacturer's instructions to complete the connection.";
     });
   </script>
+
+
+
+<script>
+  
+  const printerForm = document.getElementById("printerForm");
+  const printerInput = document.getElementById("printerModel");
+
+  // Printer model button click
+  document.querySelectorAll("#modelList button").forEach(button => {
+    button.addEventListener("click", function () {
+      printerInput.value = this.textContent.trim();
+      goToSecondPage();
+    });
+  });
+
+  // Continue button click
+  printerForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    if (!printerInput.value.trim()) {
+      printerInput.focus();
+      return;
+    }
+
+    goToSecondPage();
+  });
+
+  function goToSecondPage() {
+    const support = document.querySelector(
+      'input[name="support"]:checked'
+    ).value;
+
+    const params = new URLSearchParams({
+      model: printerInput.value.trim(),
+      support: support
+    });
+
+    window.location.href = "second.html?" + params.toString();
+  }
+</script>
+
 
 </body>
 </html>
