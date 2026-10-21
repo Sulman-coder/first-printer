@@ -909,3 +909,34 @@ footer {
 .disclaimer p {
     font-size: 10px;
 }
+
+.search-form input {
+  flex: 0 0 400px;
+  width: 220px;
+  max-width: calc(100% - 130px);
+  min-width: 0;
+  border: 1px solid #aebed0;
+  border-right: 0;
+  border-radius: 7px 0 0 7px;
+  padding: 0 10px;
+  font-size: 14px;
+  outline-color: var(--blue);
+}
+
+.search-form button {
+  flex: 0 0 auto;
+  width: 200px;
+  padding: 0 22px;
+  border: none;
+  border-radius: 0 7px 7px 0;
+  background: var(--blue);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.model-list button {
+  width: 300px;
+}

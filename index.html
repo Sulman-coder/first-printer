@@ -112,6 +112,8 @@
       or troubleshoot your printer.</p>
     </div>
 
+    <img src="epo.png" alt="">
+
     <div class="printer-visual">
       <div class="printer-top"></div>
       <div class="printer-body">
@@ -126,80 +128,39 @@
 
   <main>
 
+ <section class="wifi-section">
+      <div class="section-heading">
+        <h2>Connect Your Printer to Wi-Fi</h2>
+        <span class="info-icon">i</span>
+      </div>
 
-<section class="printer-hero">
-
-    <!-- Left Content -->
-    <div class="hero-left">
-        <h1>Printer Setup & Troubleshooting Assistance</h1>
-
-        <p class="hero-subtitle">
-            Get step-by-step guidance for installation, driver setup, Wi-Fi connectivity,
-            and common printing problems.
-        </p>
-
-        <div class="service-list">
-
-            <div class="service-item">
-                <div class="service-icon blue">
-                    <span>▤</span>
-                </div>
-                <h3>Printer Setup</h3>
-                <p>Set up your new printer<br>with easy steps.</p>
-            </div>
-
-            <div class="service-item">
-                <div class="service-icon green">
-                    <span>↓</span>
-                </div>
-                <h3>Driver Installation</h3>
-                <p>Find and install the right<br>drivers for your printer.</p>
-            </div>
-
-            <div class="service-item">
-                <div class="service-icon purple">
-                    <span>◉</span>
-                </div>
-                <h3>Wi-Fi Connectivity</h3>
-                <p>Connect your printer<br>to your wireless network.</p>
-            </div>
-
-            <div class="service-item">
-                <div class="service-icon orange">
-                    <span>🔧</span>
-                </div>
-                <h3>Troubleshooting</h3>
-                <p>Solve common printing<br>and connection issues.</p>
-            </div>
-
+      <div class="wifi-content">
+        <div class="printer-illustration">
+          <div class="wifi-symbol">⌁</div>
+          <div class="illustration-printer">
+            <div class="illustration-top"></div>
+            <div class="illustration-screen"></div>
+            <div class="illustration-tray"></div>
+          </div>
+          <p>Wireless Printer Setup</p>
         </div>
-    </div>
 
-    <!-- Center Brand -->
-    <div class="hero-brand">
-        <div class="brand-box">EPSON</div>
-    </div>
+        <div class="wifi-form">
+          <label for="network">Wi-Fi Network</label>
+          <input id="network" type="text" placeholder="Enter network name">
 
-    <!-- Right Content -->
-    <div class="hero-right">
-        <h2>We're Here to Help</h2>
+          <label for="password">Enter Printer Model Number</label>
+          <input id="password" type="password" placeholder="Enter your Printer Model Number">
 
-        <p>
-            Printer Care Solutions provides independent printer setup
-            guidance and technical assistance. We help you get your printer
-            working smoothly with clear, easy-to-follow instructions.
-        </p>
+          <p class="hint">Make sure your printer and device use the same network.</p>
 
-        <div class="disclaimer">
-            <span class="info-icon">i</span>
-            <p>
-                We are not affiliated with or endorsed by Epson or other
-                printer manufacturers unless explicitly stated.
-            </p>
+          <button class="connect-btn" id="connectBtn" type="button">
+            Connect Printer
+          </button>
+          <p class="wifi-message" id="wifiMessage" aria-live="polite"></p>
         </div>
-    </div>
-
-</section>
+      </div>
+    </section>
 
 
     <section class="support-section">
@@ -281,89 +242,9 @@
       </details>
     </section>
 
-    <section class="wifi-section">
-      <div class="section-heading">
-        <h2>Connect Your Printer to Wi-Fi</h2>
-        <span class="info-icon">i</span>
-      </div>
-
-      <div class="wifi-content">
-        <div class="printer-illustration">
-          <div class="wifi-symbol">⌁</div>
-          <div class="illustration-printer">
-            <div class="illustration-top"></div>
-            <div class="illustration-screen"></div>
-            <div class="illustration-tray"></div>
-          </div>
-          <p>Wireless Printer Setup</p>
-        </div>
-
-        <div class="wifi-form">
-          <label for="network">Wi-Fi Network</label>
-          <input id="network" type="text" placeholder="Enter network name">
-
-          <label for="password">Enter Wi-Fi Password</label>
-          <input id="password" type="password" placeholder="Enter your password">
-
-          <p class="hint">Make sure your printer and device use the same network.</p>
-
-          <button class="connect-btn" id="connectBtn" type="button">
-            Connect Printer
-          </button>
-          <p class="wifi-message" id="wifiMessage" aria-live="polite"></p>
-        </div>
-      </div>
-    </section>
+   
   </main>
-<!-- 
-  <footer>
-    <div class="keyboard-art" aria-hidden="true">
-      <div class="key-row">
-        <span>Esc</span><span>F1</span><span>F2</span><span>F3</span>
-        <span>F4</span><span>F5</span><span>F6</span><span>F7</span>
-        <span>F8</span><span>F9</span><span>F10</span><span>F11</span>
-        <span>F12</span>
-      </div>
-      <div class="key-row">
-        <span>1</span><span>2</span><span>3</span><span>4</span>
-        <span>5</span><span>6</span><span>7</span><span>8</span>
-        <span>9</span><span>0</span><span>-</span><span>=</span>
-      </div>
-      <div class="key-row">
-        <span>Tab</span><span>Q</span><span>W</span><span>E</span>
-        <span>R</span><span>T</span><span>Y</span><span>U</span>
-        <span>I</span><span>O</span><span>P</span>
-      </div>
-      <div class="key-row">
-        <span>Caps</span><span>A</span><span>S</span><span>D</span>
-        <span>F</span><span>G</span><span>H</span><span>J</span>
-        <span>K</span><span>L</span><span>Enter</span>
-      </div>
-      <div class="key-row">
-        <span>Shift</span><span>Z</span><span>X</span><span>C</span>
-        <span>V</span><span>B</span><span>N</span><span>M</span>
-        <span>,</span><span>.</span><span>Shift</span>
-      </div>
-      <div class="key-row">
-        <span>Ctrl</span><span>Win</span><span>Alt</span>
-        <span class="space-key"></span><span>Alt</span><span>Menu</span><span>Ctrl</span>
-      </div>
-    </div>
 
- <div class="footer-links">
-  <a href="index.html">Printer Setup</a>
-  <a href="supported-models.html">Supported Models</a>
-  <a href="privacy-policy.html">Privacy Policy</a>
-  <a href="refund-policy.html">Refund Policy</a>
-  <a href="about-us.html">About Us</a>
-  <a href="contact-us.html">Contact Us</a>
-</div>
-
-    <p class="disclaimer">
-      Independent printer setup and support resource.
-      Not affiliated with any printer manufacturer.
-    </p>
-  </footer> -->
 
 
 
