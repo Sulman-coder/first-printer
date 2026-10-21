@@ -22,7 +22,7 @@ body {
 }
 
 .hero {
-  min-height: 320px;
+  min-height: 212px;
   padding: 48px 7.5%;
   display: flex;
   align-items: center;
@@ -48,14 +48,15 @@ body {
 .hero h1 {
   color: var(--navy);
   font-size: clamp(32px, 4vw, 48px);
-  line-height: 1.15;
+  line-height: 1.10;
   margin-bottom: 18px;
 }
 
 .hero p {
   font-size: 17px;
-  line-height: 1.6;
+  line-height: 1.1;
 }
+
 
 .printer-visual {
   width: 340px;
@@ -273,6 +274,287 @@ body {
   gap: 55px;
   padding: 10px 20px;
 }
+
+
+/* Hero */
+
+.printer-hero {
+    width: 100%;
+    min-height: 190px;
+    display: grid;
+    grid-template-columns: 57% 19% 24%;
+    align-items: stretch;
+    background: linear-gradient(110deg, #ffffff 0%, #f5f8fc 100%);
+    border: 1px solid #e8edf4;
+    box-shadow: 0 3px 12px rgba(30, 55, 90, 0.06);
+    overflow: hidden;
+}
+
+/* LEFT SIDE */
+
+.hero-left {
+    padding: 13px 16px 10px 20px;
+}
+
+.hero-left h1 {
+    font-size: clamp(18px, 2vw, 23px);
+    line-height: 1.2;
+    font-weight: 750;
+    color: #14294f;
+    margin-bottom: 5px;
+}
+
+.hero-subtitle {
+    color: #687991;
+    font-size: 11px;
+    line-height: 1.5;
+    max-width: 520px;
+    margin-bottom: 13px;
+}
+
+.service-list {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.service-item {
+    padding: 0 10px;
+    border-right: 1px solid #e4eaf2;
+    min-width: 0;
+}
+
+.service-item:first-child {
+    padding-left: 4px;
+}
+
+.service-item:last-child {
+    border-right: none;
+}
+
+.service-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 23px;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.service-icon.blue {
+    color: #2672c7;
+    background: #d9eaff;
+}
+
+.service-icon.green {
+    color: #087b4c;
+    background: #a2f0c6;
+}
+
+.service-icon.purple {
+    color: #5428be;
+    background: #e2d8ff;
+}
+
+.service-icon.orange {
+    color: #8b4b12;
+    background: #ffe0b7;
+}
+
+.service-item h3 {
+    font-size: 10px;
+    font-weight: 700;
+    color: #203858;
+    margin-bottom: 4px;
+}
+
+.service-item p {
+    font-size: 9px;
+    line-height: 1.5;
+    color: #687991;
+}
+
+/* CENTER BRAND */
+
+.hero-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 5px;
+    background:
+        radial-gradient(ellipse at center, #ffffff 0%, #f2f5fa 75%);
+    position: relative;
+}
+
+.brand-box {
+    width: 100%;
+    max-width: 190px;
+    min-height: 70px;
+    padding: 12px 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid #e4e9f1;
+    border-radius: 24px;
+    box-shadow: 0 8px 24px rgba(37, 57, 90, 0.09);
+    color: #354ef5;
+    font-size: clamp(23px, 3vw, 39px);
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+/* RIGHT SIDE */
+
+.hero-right {
+    padding: 16px 14px 12px;
+    background: #f8faff;
+}
+
+.hero-right h2 {
+    font-size: 12px;
+    color: #172e53;
+    margin-bottom: 7px;
+    font-weight: 750;
+}
+
+.hero-right > p {
+    font-size: 10px;
+    color: #536680;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.disclaimer {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 9px 8px;
+    border-radius: 4px;
+    background: #e0efff;
+}
+
+.info-icon {
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: white;
+    background: #2776cf;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.disclaimer p {
+    font-size: 9px;
+    line-height: 1.5;
+    color: #29486f;
+    font-weight: 600;
+}
+
+/* TABLETS */
+
+@media (max-width: 900px) {
+    .printer-hero {
+        grid-template-columns: 65% 35%;
+    }
+
+    .hero-brand {
+        display: none;
+    }
+
+    .hero-left {
+        padding: 18px;
+    }
+
+    .hero-right {
+        padding: 20px 15px;
+    }
+
+    .hero-left h1 {
+        font-size: 21px;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+    .printer-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-left {
+        padding: 20px 16px;
+    }
+
+    .hero-left h1 {
+        font-size: 22px;
+    }
+
+    .hero-subtitle {
+        font-size: 12px;
+        margin-bottom: 18px;
+    }
+
+    .service-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        row-gap: 18px;
+    }
+
+    .service-item {
+        padding: 0 10px;
+        border-right: 1px solid #e4eaf2;
+    }
+
+    .service-item:nth-child(2) {
+        border-right: none;
+    }
+
+    .service-item h3 {
+        font-size: 12px;
+    }
+
+    .service-item p {
+        font-size: 11px;
+    }
+
+    .hero-brand {
+        display: flex;
+        min-height: 115px;
+    }
+
+    .brand-box {
+        max-width: 220px;
+        min-height: 65px;
+    }
+
+    .hero-right {
+        padding: 18px 16px;
+    }
+
+    .hero-right h2 {
+        font-size: 15px;
+    }
+
+    .hero-right > p {
+        font-size: 12px;
+    }
+
+    .disclaimer p {
+        font-size: 11px;
+    }
+}
+
+
+
+
+
+
 
 .printer-illustration {
   min-height: 225px;
@@ -532,4 +814,98 @@ footer {
   .footer-links {
     font-size: 12px;
   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Main Hero Section - Size Reduced */
+.hero {
+    min-height: 160px;
+    padding: 25px 7.5%;
+    gap: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(28px, 3.5vw, 40px);
+    margin-bottom: 12px;
+}
+
+.hero p {
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+.printer-visual {
+    height: 160px;
+}
+
+/* Printer Hero Section - Size Increased */
+.printer-hero {
+    min-height: 250px;
+    grid-template-columns: 57% 19% 24%;
+}
+
+.hero-left {
+    padding: 20px 18px 16px 22px;
+}
+
+.hero-left h1 {
+    font-size: clamp(20px, 2vw, 25px);
+}
+
+.hero-subtitle {
+    font-size: 12px;
+    margin-bottom: 16px;
+}
+
+.service-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.service-item h3 {
+    font-size: 11px;
+}
+
+.service-item p {
+    font-size: 10px;
+}
+
+.hero-brand {
+    padding: 15px 8px;
+}
+
+.brand-box {
+    min-height: 80px;
+}
+
+.hero-right {
+    padding: 20px 16px;
+}
+
+.hero-right h2 {
+    font-size: 14px;
+}
+
+.hero-right > p {
+    font-size: 11px;
+}
+
+.disclaimer p {
+    font-size: 10px;
 }
