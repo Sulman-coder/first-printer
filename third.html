@@ -56,7 +56,7 @@
         </div>
 
         <!-- Illustration -->
-        <div class="hero-art">
+        <!-- <div class="hero-art">
           <div class="art-circle circle-one"></div>
           <div class="art-circle circle-two"></div>
 
@@ -87,53 +87,103 @@
           <div class="plant">
             <i></i><i></i><i></i><b></b>
           </div>
-        </div>
+        </div> -->
+
+<div class="hero-art">
+  <img
+    src="digital.png"
+    alt="Digital marketing, SEO, social media marketing and business growth"
+    class="digital-marketing-image"
+  />
+</div>
 
       </div>
     </section>
 
     <!-- Services -->
+
     <section class="services-section" id="services">
-      <div class="container service-grid">
+    <div class="container service-grid">
 
-        <article class="service-card" id="marketing">
-          <div class="service-icon">↗</div>
-          <div>
-            <h2>Digital Marketing</h2>
-            <p>
-              Boost your online presence with our complete digital
-              marketing services.
-            </p>
-            <a href="#contact">Learn More <span>→</span></a>
-          </div>
-        </article>
+      <!-- Digital Marketing -->
+      <article class="service-card" id="marketing">
+        <div class="service-icon">↗</div>
+        <div>
+          <h2>Digital Marketing</h2>
+          <p>
+            Boost your online presence with our complete digital
+            marketing services.
+          </p>
+          <a href="#marketing-details"
+             class="learn-more"
+             data-service="marketing-details">
+            Learn More <span>→</span>
+          </a>
+        </div>
+      </article>
 
-        <article class="service-card" id="printers">
-          <div class="service-icon printer-symbol">▣</div>
-          <div>
-            <h2>Printers</h2>
-            <p>
-              Find the right printer for your needs with expert
-              guidance and support.
-            </p>
-            <a href="#contact">Learn More <span>→</span></a>
-          </div>
-        </article>
+      <!-- Printers -->
+      <article class="service-card" id="printers">
+        <div class="service-icon printer-symbol">▣</div>
+        <div>
+          <h2>Printers</h2>
+          <p>
+            Find the right printer for your needs with expert
+            guidance and support.
+          </p>
+          <a href="#printer-details"
+             class="learn-more"
+             data-service="printer-details">
+            Learn More <span>→</span>
+          </a>
+        </div>
+      </article>
 
-        <article class="service-card" id="education">
-          <div class="service-icon cap-symbol">◆</div>
-          <div>
-            <h2>Education</h2>
-            <p>
-              Access quality educational resources and tools
-              for a brighter future.
-            </p>
-            <a href="#contact">Learn More <span>→</span></a>
-          </div>
-        </article>
+      <!-- Education -->
+      <article class="service-card" id="education">
+        <div class="service-icon cap-symbol">◆</div>
+        <div>
+          <h2>Education</h2>
+          <p>
+            Access quality educational resources and tools
+            for a brighter future.
+          </p>
+          <a href="#education-details"
+             class="learn-more"
+             data-service="education-details">
+            Learn More <span>→</span>
+          </a>
+        </div>
+      </article>
 
-      </div>
-    </section>
+    </div>
+  </section>
+
+  <!-- Reusable Popup -->
+  <div class="modal" id="serviceModal"
+       role="dialog"
+       aria-modal="true"
+       aria-labelledby="modalTitle">
+
+    <div class="modal-content">
+      <button class="close-modal"
+              id="closeModal"
+              aria-label="Close popup">
+        &times;
+      </button>
+
+      <h2 id="modalTitle">Service Details</h2>
+
+      <div id="modalDescription"></div>
+
+      <a href="#contact" class="contact-btn" id="contactBtn">
+        Contact Us →
+      </a>
+    </div>
+
+  </div>
+
+ 
 
     <!-- About Section -->
     <section class="about-section" id="about">
@@ -216,19 +266,182 @@
   </main>
 
   <!-- Footer -->
-  <footer id="contact">
-    <div class="container footer-content">
-      <a class="logo" href="#home">
-        Bright <span>Solutions</span>
+
+
+
+
+  
+<footer id="contact">
+  <div class="container footer-content">
+    <a class="logo" href="#home">
+      Bright <span>Solutions</span>
+    </a>
+
+    <p>
+      Smart solutions for business, printing and learning.
+    </p>
+
+    <a href="mailto:hello@example.com">Contact Us</a>
+
+    <p>
+      We respect your privacy and are committed to protecting your personal information.
+      Refunds are subject to our refund policy and applicable terms.
+    </p>
+
+    <p>&copy; 2026 Bright Solutions. All rights reserved.</p>
+  </div>
+</footer>
+
+
+
+
+
+<footer id="contact">
+  <div class="container footer-content">
+
+    <a class="logo" href="#home">
+      Bright <span>Solutions</span>
+    </a>
+
+    <p>
+      Smart solutions for business, printing and learning.
+    </p>
+
+    <a href="mailto:hello@example.com">Contact Us</a>
+
+    <!-- Email Address -->
+    <p>
+      <a href="mailto:hello@example.com">
+        <span>✉</span> hello@example.com
       </a>
+    </p>
 
-      <p>
-        Smart solutions for business, printing and learning.
-      </p>
+    <p>
+      We respect your privacy and are committed to protecting
+      your personal information. Refunds are subject to our
+      refund policy and applicable terms.
+    </p>
 
-      <a href="mailto:hello@example.com">Contact Us</a>
-    </div>
-  </footer>
+    <p>&copy; 2026 Bright Solutions. All rights reserved.</p>
+
+  </div>
+</footer>
+
+
+
+
+   <script>
+    const serviceDetails = {
+      "marketing-details": {
+        title: "Digital Marketing",
+        description: `
+          <p>
+            Learn how digital marketing can help improve your online
+            visibility, reach the right audience, and build a stronger
+            online presence.
+          </p>
+          <p>
+            Explore SEO, social media marketing, content creation,
+            email campaigns, and online advertising to promote your
+            products or services.
+          </p>
+          <p>
+            Discover practical strategies to increase brand awareness,
+            engage potential customers, improve website performance,
+            and measure marketing results to make informed business
+            decisions.
+          </p>
+        `
+      },
+
+      "printer-details": {
+        title: "Printers",
+        description: `
+          <p>
+            Find the right printer for your home, office, school,
+            or business with expert guidance and support.
+          </p>
+          <p>
+            Explore printing solutions, printer features, ink and toner
+            options, maintenance tips, and troubleshooting support.
+          </p>
+          <p>
+            Our goal is to help you choose a reliable and cost-effective
+            printing solution that meets your needs.
+          </p>
+        `
+      },
+
+      "education-details": {
+        title: "Education",
+        description: `
+          <p>
+            Access quality educational resources and tools designed
+            to support learning, skill development, and academic growth.
+          </p>
+          <p>
+            Discover useful learning materials, digital resources,
+            and opportunities to develop knowledge and practical skills.
+          </p>
+          <p>
+            Explore educational solutions that help students and
+            learners work toward a brighter future.
+          </p>
+        `
+      }
+    };
+
+    const modal = document.getElementById("serviceModal");
+    const modalTitle = document.getElementById("modalTitle");
+    const modalDescription = document.getElementById("modalDescription");
+    const closeModal = document.getElementById("closeModal");
+    const contactBtn = document.getElementById("contactBtn");
+
+    let previousFocus = null;
+
+    document.querySelectorAll(".learn-more").forEach(link => {
+      link.addEventListener("click", function(event) {
+        event.preventDefault();
+
+        const service = serviceDetails[this.dataset.service];
+
+        if (!service) return;
+
+        previousFocus = this;
+        modalTitle.textContent = service.title;
+        modalDescription.innerHTML = service.description;
+
+        modal.classList.add("show");
+        document.body.style.overflow = "hidden";
+        closeModal.focus();
+      });
+    });
+
+    function hideModal() {
+      modal.classList.remove("show");
+      document.body.style.overflow = "";
+
+      if (previousFocus) {
+        previousFocus.focus();
+      }
+    }
+
+    closeModal.addEventListener("click", hideModal);
+
+    // Close popup by clicking outside the content
+    modal.addEventListener("click", function(event) {
+      if (event.target === modal) {
+        hideModal();
+      }
+    });
+
+    // Close popup using the Escape key
+    document.addEventListener("keydown", function(event) {
+      if (event.key === "Escape" && modal.classList.contains("show")) {
+        hideModal();
+      }
+    });
+  </script>
 
 </body>
 </html>
